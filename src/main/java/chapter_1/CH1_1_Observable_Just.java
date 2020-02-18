@@ -2,7 +2,7 @@ package chapter_1;
 
 import io.reactivex.Observable;
 
-public class ObservableTryOut_1_Just {
+public class CH1_1_Observable_Just {
 
     public static void main(String[] args){
         Observable<String> sourceObservable = Observable.just("Alpha",

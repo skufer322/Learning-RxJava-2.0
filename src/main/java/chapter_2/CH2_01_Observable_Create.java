@@ -2,7 +2,7 @@ package chapter_2;
 
 import io.reactivex.Observable;
 
-public class ObservableTryOut_1_Create {
+public class CH2_01_Observable_Create {
 
     public static void main(String[] args) {
         Observable<String> sourceObservable = Observable.create(emitter -> {

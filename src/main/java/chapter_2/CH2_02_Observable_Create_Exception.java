@@ -2,7 +2,7 @@ package chapter_2;
 
 import io.reactivex.Observable;
 
-public class ObservableTryOut_2_Create_Exception {
+public class CH2_02_Observable_Create_Exception {
 
     public static void main(String[] args){
         Observable<Integer> observable = Observable.create(emitter ->
@@ -14,6 +14,7 @@ public class ObservableTryOut_2_Create_Exception {
                         emitter.onNext(10 / 2);
                         emitter.onNext(10 / 1);
                         emitter.onNext(10 / 0);
+                        emitter.onComplete();
                     } catch (Exception e){
                         emitter.onError(e);
                     }
