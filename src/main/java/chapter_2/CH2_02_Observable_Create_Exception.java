@@ -4,7 +4,7 @@ import io.reactivex.Observable;
 
 public class CH2_02_Observable_Create_Exception {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Observable<Integer> observable = Observable.create(emitter ->
                 {
                     try {
@@ -15,7 +15,7 @@ public class CH2_02_Observable_Create_Exception {
                         emitter.onNext(10 / 1);
                         emitter.onNext(10 / 0);
                         emitter.onComplete();
-                    } catch (Exception e){
+                    } catch (Exception e) {
                         emitter.onError(e);
                     }
                 }

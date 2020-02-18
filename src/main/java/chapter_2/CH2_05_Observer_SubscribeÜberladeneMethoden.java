@@ -4,7 +4,7 @@ import io.reactivex.Observable;
 
 public class CH2_05_Observer_SubscribeÜberladeneMethoden {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Observable<String> observable = Observable.just("Alpha", "Beta", "Gamma", "Delta", "Epsilon");
 
         observable.subscribe(s -> System.out.println("received: " + s));

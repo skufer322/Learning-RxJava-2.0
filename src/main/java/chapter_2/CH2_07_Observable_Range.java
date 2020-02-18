@@ -4,7 +4,7 @@ import io.reactivex.Observable;
 
 public class CH2_07_Observable_Range {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Observable<Integer> observable = Observable.range(10, 5);
 
         observable.subscribe(val -> System.out.println("Received val: " + val));
