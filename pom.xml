@@ -7,6 +7,27 @@
     <groupId>groupId</groupId>
     <artifactId>Learning-RxJava-2.0</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <rxjava.version>2.2.17</rxjava.version>
+        <guava.version>28.2-jre</guava.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.reactivex.rxjava2</groupId>
+            <artifactId>rxjava</artifactId>
+            <version>${rxjava.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -19,16 +40,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <properties>
-        <rxjava.version>2.2.17</rxjava.version>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>io.reactivex.rxjava2</groupId>
-            <artifactId>rxjava</artifactId>
-            <version>${rxjava.version}</version>
-        </dependency>
-    </dependencies>
 </project>
