@@ -1,7 +1,6 @@
 package chapter_7.chapter_7_4_Switching;
 
 import io.reactivex.Observable;
-import io.reactivex.Observer;
 import io.reactivex.rxjavafx.observables.JavaFxObservable;
 import io.reactivex.rxjavafx.schedulers.JavaFxScheduler;
 import javafx.application.Application;
@@ -18,7 +17,7 @@ public class CH7_4_02_Switching_StopWatch extends Application {
     //braucht Java 8 -> in POM und IntelliJ Settings umstellen!
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) {
         VBox root = new VBox();
         Label counterLabel = new Label("");
         ToggleButton startStopButton = new ToggleButton();
