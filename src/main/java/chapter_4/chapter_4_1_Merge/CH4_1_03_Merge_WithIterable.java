@@ -2,6 +2,7 @@ package chapter_4.chapter_4_1_Merge;
 
 import io.reactivex.Observable;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class CH4_1_03_Merge_WithIterable {
@@ -13,7 +14,7 @@ public class CH4_1_03_Merge_WithIterable {
         Observable<String> observable4 = Observable.just("Eta", "Theta");
         Observable<String> observable5 = Observable.just("Iota", "Kappa");
 
-        Observable<String> merged = Observable.merge(List.of(observable1, observable2, observable3, observable4, observable5));
+        Observable<String> merged = Observable.merge(Arrays.asList(observable1, observable2, observable3, observable4, observable5));
 
         merged.subscribe(System.out::println);
     }

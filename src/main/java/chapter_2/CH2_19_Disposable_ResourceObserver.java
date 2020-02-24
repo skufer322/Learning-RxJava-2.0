@@ -31,7 +31,7 @@ public class CH2_19_Disposable_ResourceObserver {
     }
 
     private static Observer<Long> getObserver() {
-        return new Observer<>() {
+        return new Observer<Long>() {
             @Override
             public void onSubscribe(Disposable disposable) {
                 // do nothing

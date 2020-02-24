@@ -9,8 +9,8 @@
         <module name="Learning-RxJava-2.0" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11">
-      <module name="Learning-RxJava-2.0" target="11" />
+    <bytecodeTargetLevel target="8">
+      <module name="Learning-RxJava-2.0" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

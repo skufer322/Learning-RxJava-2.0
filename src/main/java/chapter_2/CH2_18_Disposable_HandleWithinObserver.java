@@ -11,7 +11,7 @@ public class CH2_18_Disposable_HandleWithinObserver {
     public static void main(String[] args) {
         Observable<Long> observable = Observable.interval(1, TimeUnit.SECONDS);
 
-        observable.subscribe(new Observer<>() {
+        observable.subscribe(new Observer<Long>() {
 
             private Disposable disposable;
             int counter;

@@ -2,6 +2,7 @@ package chapter_4.chapter_4_3_Ambiguous;
 
 import io.reactivex.Observable;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -15,7 +16,7 @@ public class CH4_3_01_Ambiguous {
         Observable<String> observable3 = Observable.interval(990_999, TimeUnit.MICROSECONDS)
                 .map(val -> "990_999micros interval: " + ((val + 1) * 990_999) + " microseconds passed");
 
-        Observable.amb(List.of(observable1, observable2, observable3))
+        Observable.amb(Arrays.asList(observable1, observable2, observable3))
                 .subscribe(System.out::println);
 
         sleep(5);

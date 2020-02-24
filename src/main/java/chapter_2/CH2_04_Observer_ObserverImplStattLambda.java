@@ -9,7 +9,7 @@ public class CH2_04_Observer_ObserverImplStattLambda {
     public static void main(String[] args) {
         Observable<String> observable = Observable.just("Alpha", "Beta", "Gamma", "Delta", "Epsilon");
 
-        Observer<String> observer = new Observer<>() {
+        Observer<String> observer = new Observer<String>() {
 
             @Override
             public void onSubscribe(Disposable disposable) {
