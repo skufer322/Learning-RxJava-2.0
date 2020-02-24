@@ -28,7 +28,7 @@ public class CH7_4_03_Switching_Keystrokes extends Application {
                 .refCount();
 
         Observable<String> restSignal = typedLetters.throttleWithTimeout(500, TimeUnit.MILLISECONDS)
-                .startWith("");
+                .startWith(""); // ist eigentlich unnötig, da man an diesem wert nicht interessiert ist
 
         restSignal.switchMap(s ->
                 typedLetters.scan("", (accumulator, next) -> accumulator + next)
