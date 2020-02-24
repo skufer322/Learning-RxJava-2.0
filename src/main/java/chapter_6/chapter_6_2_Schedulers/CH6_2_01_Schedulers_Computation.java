@@ -6,7 +6,7 @@ import io.reactivex.schedulers.Schedulers;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class CH6_2_01_Scheduler_Computation {
+public class CH6_2_01_Schedulers_Computation {
 
     public static void main(String[] args){
         Observable.just("Alpha", "Beta", "Gamma")
@@ -19,7 +19,7 @@ public class CH6_2_01_Scheduler_Computation {
                 .map(i -> longRunningMethod(i))
                 .subscribe(s -> System.out.println("observer 2: " + s + "    [on thread: " + Thread.currentThread().getName() + "]"));
 
-        Observable.just(List.of("Delta", "Epsilon"), List.of("Zheta", "Eta", "Theta"))
+        Observable.just(List.of("Delta", "Epsilon"), List.of("Zeta", "Eta", "Theta"))
                 .subscribeOn(Schedulers.computation())
                 .map(s -> longRunningMethod(s))
                 .flatMapIterable(list -> list)

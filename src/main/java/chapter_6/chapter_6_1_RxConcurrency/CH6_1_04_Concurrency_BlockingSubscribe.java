@@ -6,15 +6,15 @@ import io.reactivex.schedulers.Schedulers;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * blockingSubscribe sorgt dafür, dass alles im main thread ausgeführt wird
+ * blockingSubscribe sorgt dafür, dass alles im main thread ausgeführt wird..?
  */
-public class CH6_1_03_Concurrency_BlockingSubscribe {
+public class CH6_1_04_Concurrency_BlockingSubscribe {
 
     public static void main(String[] args) {
 
         Observable.just("Alpha", "Beta", "Gamma", "Delta")
-                .subscribeOn(Schedulers.computation())
-                .map(CH6_1_03_Concurrency_BlockingSubscribe::longRunningFunction)
+                .subscribeOn(Schedulers.newThread())
+                .map(CH6_1_04_Concurrency_BlockingSubscribe::longRunningFunction)
                 .blockingSubscribe(i -> System.out.println("observer 1: " + i + "   [on thread " + Thread.currentThread().getName() + "]"));
     }
 
