@@ -16,7 +16,7 @@ public class CH4_6_01_GroupBy_ToList {
 
         // flatmap zum vergleich -> klopft alles flach in eine 'liste'
         observable.groupBy(String::length)
-                .flatMap(s -> s)
+                .flatMap(group -> group)
                 .subscribe(System.out::println);
     }
 }
